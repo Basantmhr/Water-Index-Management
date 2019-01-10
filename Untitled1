@@ -1,0 +1,121 @@
+//Developed By Basant Singh
+#include<stdio.h>
+#include<time.h>
+#include<string.h>
+#include<stdlib.h>
+void main()
+{	FILE *fp;
+	char state[20],dist[20];
+	int zon,i;
+	printf("\t \t \tWater Quality Checker Version 1.2\n");
+	printf("Main Menu.\n");
+	printf("Enter Repective number associated with Zone\n");
+	printf("1.NORTH ZONE\n");
+	printf("2.EAST ZONE\n");
+	printf("3.WEST ZONE\n");
+	printf("4.SOUTH ZONE\n");
+	printf("5.CENTRAL ZONE\n");
+	printf("6.NORTH EAST ZONE\n");
+	printf("7.EXIT\n");
+	scanf("%d",&zon);
+	switchi:
+	switch(zon)
+		{
+			case 1:
+					goto north;
+					break;
+
+			case 2:
+					goto east;
+					break;
+
+			case 3:
+					goto west;
+					break;
+
+			case 4:
+					goto south;
+					break;
+
+			case 5:
+					goto central;
+					break;
+
+			case 6:
+					goto northeast;
+					break;
+
+			case 7:
+					exit(1);
+					break;
+
+			default:
+					printf("Invalid Number\n");
+					exit(1);
+
+		}
+		north:
+		{
+		fp=fopen("North_zone.txt","a");
+		printf("Enter State\n");
+		scanf("%s",state);
+		fprintf(fp,"State = %s\n",state);
+		printf("Enter District\n");
+		scanf("%s",dist);
+		fprintf(fp, "District = %s\n", dist);
+        }
+
+		west:
+{
+		fp=fopen("West_zone.txt","a");
+		printf("Enter State\n");
+		scanf("%s",state);
+		fprintf(fp,"State = %s\n",state);
+		printf("Enter District\n");
+		scanf("%s",dist);
+		fprintf(fp, "District = %s\n", dist);
+}
+		east:
+		{
+		fp=fopen("East_zone.txt","a");
+		printf("Enter State\n");
+		scanf("%s",state);
+		fprintf(fp,"State = %s\n",state);
+		printf("Enter District\n");
+		scanf("%s",dist);
+		fprintf(fp, "District = %s\n", dist);
+}
+		south:
+		{
+		fp=fopen("South_zone.txt","a");
+		printf("Enter State\n");
+		scanf("%s",state);
+		fprintf(fp,"State = %s\n",state);
+		printf("Enter District\n");
+		scanf("%s",dist);
+		fprintf(fp, "District = %s\n", dist);
+}
+		central:{
+		fp=fopen("Central_zone.txt","a");
+		printf("Enter State\n");
+		scanf("%s",state);
+		fprintf(fp,"State = %s\n",state);
+		printf("Enter District\n");
+		scanf("%s",dist);
+		fprintf(fp, "District = %s\n", dist);
+}
+		northeast:
+		{
+		fp=fopen("North_East_zone.txt","a");
+		printf("Enter State\n");
+		scanf("%s",state);
+		fprintf(fp,"State = %s\n",state);
+		printf("Enter District\n");
+		scanf("%s",dist);
+		fprintf(fp, "District = %s\n", dist);
+}
+
+
+        fcloseall();
+
+}
