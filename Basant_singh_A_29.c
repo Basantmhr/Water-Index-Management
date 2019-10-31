@@ -951,3 +951,6 @@ int main()
 
 
 }
+void deffunc()
+	
+	
